@@ -21,7 +21,7 @@ const search = async (
   
   const r = await client.search({
     index: "indi",
-    size: 10,
+    size: 100,
     body: {
       query: {
         fuzzy: {
