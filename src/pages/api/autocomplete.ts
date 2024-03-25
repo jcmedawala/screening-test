@@ -24,9 +24,12 @@ const search = async (
     size: 10,
     body: {
       query: {
-        match_bool_prefix: {
-          title: { operator: "and", query: queryString },
-        },
+        fuzzy: {
+          title: {
+            value: queryString,
+            fuzziness: 2
+          }
+        }
       },
     },
   });
