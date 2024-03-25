@@ -21,7 +21,7 @@ const search = async (
   
   const r = await client.search({
     index: "indi",
-    size: 100,
+    size: 10,
     body: {
       query: {
         match_bool_prefix: {
